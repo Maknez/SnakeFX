@@ -36,12 +36,10 @@ public class SnakeController {
     @FXML
     private MenuItem restartButton;
     private Timeline timeline;
-    
     @FXML
     private void exitAction(ActionEvent event) {
         System.exit(0);
     }
-
     @FXML
     private void newActionEasy(ActionEvent event) {
         speed = 250;
@@ -104,7 +102,6 @@ public class SnakeController {
         }
     }
     @FXML
-
     public void repaint() {
         Duration duration = Duration.millis(speed);
         timeline = new Timeline(new KeyFrame(duration, (ActionEvent event) -> {

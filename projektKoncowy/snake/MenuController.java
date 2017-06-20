@@ -44,7 +44,7 @@ public class MenuController {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    leadersBoardController.setStage(menuStage);
+                    LeadersBoardController.setStage(menuStage);
                     menuStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("leadersBoard.fxml"))));
                 } catch (IOException e) {
                     e.printStackTrace();

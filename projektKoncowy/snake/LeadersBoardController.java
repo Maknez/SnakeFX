@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class leadersBoardController {
+public class LeadersBoardController {
 
     private static Stage menuStage;
     @FXML

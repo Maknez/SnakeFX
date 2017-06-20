@@ -10,7 +10,6 @@ public class SnakePart {
     private int x;
     private int y;
     private static Color color = new Color(0.1529, 0.1529, 0.1529, 1);
-
     private static int width;
     private static int height;
 
