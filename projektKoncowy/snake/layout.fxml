@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projektKoncowy.snake.SnakeController">
+   <center>
+      <HBox style="-fx-background-color: BLANCHEDALMOND;" BorderPane.alignment="CENTER">
+         <children>
+            <Canvas fx:id="canvas" focusTraversable="true" height="600.0" onKeyPressed="#keyHandler" width="600.0">
+            </Canvas>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <Pane prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #ff9952;" BorderPane.alignment="CENTER">
+         <children>
+             <Text fx:id="text" fill="#272727" layoutX="22.0" layoutY="43.0" textAlignment="CENTER" wrappingWidth="100.0">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Text>
+            <MenuBar layoutX="454.0" layoutY="-1.0" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #ffb17a;">
+              <menus>
+                  <Menu mnemonicParsing="false" style="-fx-background-colo: #ffb17a;" text="New Game">
+                    <items>
+                    <MenuItem id="easy" mnemonicParsing="false" onAction="#newActionEasy" text="Easy" />
+                      <MenuItem id="medium" mnemonicParsing="false" onAction="#newActionMedium" text="Medium" />
+                        <MenuItem id="hard" mnemonicParsing="false" onAction="#newActionHard" text="Hard" />
+                        <MenuItem id="insane" mnemonicParsing="false" onAction="#newActionInsane" text="Insane" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Menu">
+                  <items>
+                        <MenuItem fx:id="restartButton" mnemonicParsing="false" text="Restart" />
+                     <MenuItem fx:id="returnButton" mnemonicParsing="false" text="Return" />
+                     <MenuItem mnemonicParsing="false" onAction="#exitAction" text="Exit" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextField alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="477.0" layoutY="65.0" prefHeight="35.0" prefWidth="123.0" style="-fx-background-color: NULL;" text="Artur Karliński">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
